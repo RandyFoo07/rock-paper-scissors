@@ -1,0 +1,73 @@
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 40px;
+    margin: 20px;
+    margin-bottom: 0px;
+    padding: 20px;
+}
+
+div.playerChoice, div.result, div.computerChoice {
+    margin: 100px 20px 0px 20px;
+    display: inline-block;
+}
+
+div.result {
+    position: relative;
+    bottom: 50px;
+    height: 200px;
+    width: 400px;
+    border: 1px solid #e7e7e7;
+}
+
+div.result h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 100px;
+}
+
+div.lhs p, div.rhs p {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+div button {
+    display: block;
+    padding: 20px;
+    margin-top: 50px;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    height: 100px;
+    width: 100px;
+    background-color: #e7e7e7;
+}
+
+.lhs {
+    margin-left: 100px;
+    display: block;
+    float: left;
+}
+
+.rhs {
+    margin-right: 100px;
+    display: block;
+    float: right;
+}
+
+.lhs button.playerF:hover {
+    background-color: rgb(255, 142, 90);
+    box-shadow: 0px 0px 20px 10px rgb(255, 122, 61);
+}
+
+.lhs button.playeW:hover {
+
+}
+
+/*things to google
+how to center elements of position absolute
+
+*/

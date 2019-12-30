@@ -14,7 +14,7 @@ function computerPlay() {
     return choice[getRandomInt(3)]
 }
 
-let playerSelection = () => prompt('Rock, Paper or Scissors?');
+//let playerSelection = () => prompt('Rock, Paper or Scissors?');
 let computerSelection = () => computerPlay();
 
 function playRound(playerSelection, computerSelection) {
@@ -60,27 +60,30 @@ function playRound(playerSelection, computerSelection) {
 function game() {
     let playerScore = 0;
     let computerScore = 0;
-    for (let i = 0; i < 5; i++) {
-        let pChoice = playerSelection();
-        let cChoice = computerSelection();
-        const result = playRound(pChoice, cChoice);
-        if (result === 0) {
-            console.log(`It's a Draw! Both of you chose ${cChoice}`);
-        } else if (result === 1) {
-            playerScore++;
-            console.log(`You Win! ${pChoice} beats ${cChoice}`);
-        } else if (result === -1) {
-            computerScore++;
-            console.log(`You Lose! ${cChoice} beats ${pChoice}`);
-        } else {
-            console.log('Invalid input!')
-        }
+    let pChoice = playerSelection();
+    let cChoice = computerSelection();
+    const result = playRound(pChoice, cChoice);
+    if (result === 0) {
+        console.log(`It's a Draw! Both of you chose ${cChoice}`);
     }
-    if (playerScore > computerScore) {
-        console.log('You Won the Game!');
+    else if (result === 1) {
+        playerScore++;
+        console.log(`You Win! ${pChoice} beats ${cChoice}`);
+    } else if (result === -1) {
+        computerScore++;
+        console.log(`You Lose! ${cChoice} beats ${pChoice}`);
     } else {
+        console.log('Invalid input!')
+    }
+
+    if (playerScore === 5) {
+        console.log('You Won the Game!');
+    } else if (computerScore === 5) {
         console.log('You Lost the Game!');
     }
 }
-
 console.log(game());
+
+    //console.log(`It's a Draw! Both of you chose ${cChoice}`);
+    //console.log(`You Win! ${pChoice} beats ${cChoice}`);
+    //console.log(`You Lose! ${cChoice} beats ${pChoice}`);

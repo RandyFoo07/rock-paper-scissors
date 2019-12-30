@@ -5,92 +5,13 @@
     <title>
         Rock Paper Scissors
     </title>
-    <script>
-        function getRandomInt(max) {
-            return Math.floor(Math.random() * Math.floor(max));
-        }
-
-        function computerPlay() {
-            const choice = ['Rock', 'Paper', 'Scissors']
-            return choice[getRandomInt(3)]
-        }
-
-        let playerSelection = () => prompt('Rock, Paper or Scissors?');
-        let computerSelection = () => computerPlay();
-
-        function playRound(playerSelection, computerSelection) {
-
-            if (computerSelection.toUpperCase() === 'ROCK') {
-                switch (playerSelection.toUpperCase()) {
-                    case 'SCISSORS':
-                        return -1;
-                    case 'ROCK':
-                        return 0;
-                    case 'PAPER':
-                        return 1;
-                    default:
-                        break;
-                }
-            }
-            if (computerSelection.toUpperCase() === 'PAPER') {
-                switch (playerSelection.toUpperCase()) {
-                    case 'SCISSORS':
-                        return 1;
-                    case 'ROCK':
-                        return -1;
-                    case 'PAPER':
-                        return 0;
-                    default:
-                        break;
-                }
-            }
-            if (computerSelection.toUpperCase() === 'SCISSORS') {
-                switch (playerSelection.toUpperCase()) {
-                    case 'SCISSORS':
-                        return 0;
-                    case 'ROCK':
-                        return 1;
-                    case 'PAPER':
-                        return -1;
-                    default:
-                        break;
-                }
-            }
-        }
-
-        function game() {
-            let playerScore = 0;
-            let computerScore = 0;
-            for (let i = 0; i < 5; i++) {
-                let pChoice = playerSelection();
-                let cChoice = computerSelection();
-                const result = playRound(pChoice, cChoice);
-                if (result === 0) {
-                    console.log(`It's a Draw! Both of you chose ${cChoice}`);
-                } else if (result === 1) {
-                    playerScore++;
-                    console.log(`You Win! ${pChoice} beats ${cChoice}`);
-                } else if (result === -1) {
-                    computerScore++;
-                    console.log(`You Lose! ${cChoice} beats ${pChoice}`);
-                } else {
-                    console.log('Invalid input!')
-                }
-            }
-            if (playerScore > computerScore) {
-                console.log('You Won the Game!');
-            } else {
-                console.log('You Lost the Game!');
-            }
-        }
-
-        console.log(game());
-    </script>
-
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <h1>Rock Paper Scissors</h1>
 
 </body>
+<script src="scripts.js"></script>
 
 </html>

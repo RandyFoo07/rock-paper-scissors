@@ -18,7 +18,7 @@ div.playerChoice, div.result, div.computerChoice {
 
 div.result {
     position: relative;
-    bottom: 50px;
+    bottom: 100px;
     height: 200px;
     width: 400px;
     border: 1px solid #e7e7e7;
@@ -38,7 +38,7 @@ div.lhs p, div.rhs p {
     font-size: 25px;
 }
 
-div button {
+div button.fas, div button {
     display: block;
     padding: 20px;
     margin-top: 50px;
@@ -51,13 +51,11 @@ div button {
 
 .lhs {
     margin-left: 100px;
-    display: block;
     float: left;
 }
 
 .rhs {
     margin-right: 100px;
-    display: block;
     float: right;
 }
 

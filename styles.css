@@ -3,7 +3,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-h1 {
+h1#title {
     font-weight: bold;
     font-size: 40px;
     margin: 20px;
@@ -11,14 +11,21 @@ h1 {
     padding: 20px;
 }
 
-div.playerChoice, div.result, div.computerChoice {
+.resultScreen {
     margin: 100px 20px 0px 20px;
+}
+
+.result h1 {
+    font-size: 25px;
+}
+
+div.result, div.playerChoice, div.computerChoice {
     display: inline-block;
 }
 
 div.result {
     position: relative;
-    bottom: 100px;
+
     height: 200px;
     width: 400px;
     border: 1px solid #e7e7e7;
@@ -38,10 +45,10 @@ div.lhs p, div.rhs p {
     font-size: 25px;
 }
 
-div button.fas, div button {
+div button.fas, button {
     display: block;
     padding: 20px;
-    margin-top: 50px;
+    margin: 50px 20px;
     border: 1px solid transparent;
     border-radius: 50px;
     height: 100px;

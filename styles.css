@@ -33,7 +33,7 @@ div.result, div.playerChoice, div.computerChoice {
 
 div.result {
     position: relative;
-    vertical-align: baseline;
+    vertical-align: top;
     height: 200px;
     width: 400px;
     border: 1px solid #e7e7e7;

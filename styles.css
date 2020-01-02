@@ -1,6 +1,7 @@
 body {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
+    background-image: url(images/background.png);
 }
 
 h1#title {
@@ -13,19 +14,26 @@ h1#title {
 
 .resultScreen {
     margin: 100px 20px 0px 20px;
+    height: 200px;
 }
 
 .result h1 {
     font-size: 25px;
 }
 
+.resultScreen {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 div.result, div.playerChoice, div.computerChoice {
     display: inline-block;
+    vertical-align: top;
 }
 
 div.result {
     position: relative;
-
+    vertical-align: baseline;
     height: 200px;
     width: 400px;
     border: 1px solid #e7e7e7;

@@ -50,9 +50,6 @@ function selectChoice(e) {
         playerChoice = 'Grass';
     }
 
-    console.log(playerChoice);
-    console.log(computerChoice);
-
     playerC.className = className;
 }
 
@@ -71,63 +68,10 @@ function playGame(e) {
         roundNum.textContent = 'Final Round';
     }
 
-    const resultScreen = document.querySelector('.result h3');
     const overallResult = document.querySelector('.result h1');
 
-
     if (round <= 5) {
-        if (computerChoice === 'Fire') {
-            switch (playerChoice) {
-                case 'Fire':
-                    resultScreen.textContent = `It's a Draw! Both of you chose ${playerChoice}`;
-                    round++;
-                    break;
-                case 'Water':
-                    resultScreen.textContent = `You Win! ${playerChoice} beats ${computerChoice}`;
-                    round++;
-                    playerScore++;
-                    break;
-                case 'Grass':
-                    resultScreen.textContent = `You Lose! ${computerChoice} beats ${playerChoice}`;
-                    round++;
-                    computerScore++;
-                    break;
-            }
-        } else if (computerChoice === 'Water') {
-            switch (playerChoice) {
-                case 'Water':
-                    resultScreen.textContent = `It's a Draw! Both of you chose ${playerChoice}`;
-                    round++;
-                    break;
-                case 'Grass':
-                    resultScreen.textContent = `You Win! ${playerChoice} beats ${computerChoice}`;
-                    round++;
-                    playerScore++;
-                    break;
-                case 'Fire':
-                    resultScreen.textContent = `You Lose! ${computerChoice} beats ${playerChoice}`;
-                    round++;
-                    computerScore++;
-                    break;
-            }
-        } else if (computerChoice === 'Grass') {
-            switch (playerChoice) {
-                case 'Grass':
-                    resultScreen.textContent = `It's a Draw! Both of you chose ${playerChoice}`;
-                    round++;
-                    break;
-                case 'Fire':
-                    resultScreen.textContent = `You Win! ${playerChoice} beats ${computerChoice}`;
-                    round++;
-                    playerScore++;
-                    break;
-                case 'Water':
-                    resultScreen.textContent = `You Lose! ${computerChoice} beats ${playerChoice}`;
-                    round++;
-                    computerScore++;
-                    break;
-            }
-        }
+        playRound();
     }
     if (round === 6) {
         if (playerScore > computerScore) {
@@ -138,5 +82,62 @@ function playGame(e) {
             overallResult.textContent = 'The Game ended in a Draw!';
         }
     }
-
 }
+
+function playRound() {
+    const resultScreen = document.querySelector('.result h3');
+    if (computerChoice === 'Fire') {
+        switch (playerChoice) {
+            case 'Fire':
+                resultScreen.textContent = `It's a Draw! Both of you chose ${playerChoice}`;
+                round++;
+                break;
+            case 'Water':
+                resultScreen.textContent = `You Win! ${playerChoice} beats ${computerChoice}`;
+                round++;
+                playerScore++;
+                break;
+            case 'Grass':
+                resultScreen.textContent = `You Lose! ${computerChoice} beats ${playerChoice}`;
+                round++;
+                computerScore++;
+                break;
+        }
+    } else if (computerChoice === 'Water') {
+        switch (playerChoice) {
+            case 'Water':
+                resultScreen.textContent = `It's a Draw! Both of you chose ${playerChoice}`;
+                round++;
+                break;
+            case 'Grass':
+                resultScreen.textContent = `You Win! ${playerChoice} beats ${computerChoice}`;
+                round++;
+                playerScore++;
+                break;
+            case 'Fire':
+                resultScreen.textContent = `You Lose! ${computerChoice} beats ${playerChoice}`;
+                round++;
+                computerScore++;
+                break;
+        }
+    } else if (computerChoice === 'Grass') {
+        switch (playerChoice) {
+            case 'Grass':
+                resultScreen.textContent = `It's a Draw! Both of you chose ${playerChoice}`;
+                round++;
+                break;
+            case 'Fire':
+                resultScreen.textContent = `You Win! ${playerChoice} beats ${computerChoice}`;
+                round++;
+                playerScore++;
+                break;
+            case 'Water':
+                resultScreen.textContent = `You Lose! ${computerChoice} beats ${playerChoice}`;
+                round++;
+                computerScore++;
+                break;
+        }
+    }
+}
+
+//replay button

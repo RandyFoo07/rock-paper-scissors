@@ -110,10 +110,10 @@ function playGame(e) {
 
 
     if (computerHP.value === 0) {
-        overallResult.textContent = 'Congratulations! You Won the Game!';
+        overallResult.textContent = 'Congrats! You Won the Game!';
     }
     if (playerHP.value === 0) {
-        overallResult.textContent = 'Too Bad! You Lost the Game';
+        overallResult.textContent = 'Too Bad! You Lost the Game!';
     }
 }
 

@@ -1,4 +1,9 @@
 /* eliminate white space from making the page scrollable (effects of position relative on *selection* elements*/
+@font-face {
+    font-family: oldSchoolFont;
+    src: url(assets/orange_kid.otf);
+}
+
 html, body {
     height: 98%;
 }
@@ -10,8 +15,11 @@ body {
 }
 
 h1#title {
-    font-weight: bold;
-    font-size: 40px;
+    font-family: oldSchoolFont;
+    letter-spacing: 2px;
+    color: #111;
+    text-shadow: 3px 3px #888;
+    font-size: 100px;
     margin: 20px;
     margin-bottom: 0px;
     padding: 20px;
@@ -33,6 +41,7 @@ h1#title {
 } */
 
 .hpBars progress::before {
+    font-family: oldSchoolFont;
     content: attr(value)'/'attr(max);
     position: relative;
     bottom: 8px;
@@ -43,6 +52,7 @@ h1#title {
 } */
 
 .hpBars p {
+    font-family: oldSchoolFont;
     position: relative;
     display: inline-block;
     margin: 0;
@@ -72,6 +82,7 @@ h1#title {
 }
 
 .resultScreen {
+    font-family: oldSchoolFont;
     margin: 10px 20px 0px 20px;
     height: 200px;
     border: 1px solid #888;
@@ -82,7 +93,8 @@ h1#title {
 }
 
 .result h1 {
-    font-size: 25px;
+    font-family: oldSchoolFont;
+    font-size: 30px;
 }
 
 .resultScreen {
@@ -100,6 +112,9 @@ div.result, div.playerChoice, div.computerChoice {
 }
 
 div.result {
+    font-family: oldSchoolFont;
+    font-size: 20px;
+    letter-spacing: 2px;
     position: relative;
     vertical-align: top;
     height: 200px;
@@ -116,6 +131,8 @@ div.result h3 {
 }
 
 div.lhs p, div.rhs p {
+    font-family: oldSchoolFont;
+    letter-spacing: 2px;
     font-weight: bold;
     font-size: 25px;
 }

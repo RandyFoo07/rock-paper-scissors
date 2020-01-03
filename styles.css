@@ -6,7 +6,7 @@ html, body {
 body {
     text-align: center;
     font-family: Helvetica, Arial, sans-serif;
-    background-image: url(images/background.png);
+    background-image: url(images/background1.jpg);
 }
 
 h1#title {
@@ -74,6 +74,11 @@ h1#title {
 .resultScreen {
     margin: 10px 20px 0px 20px;
     height: 200px;
+    border: 1px solid #888;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 0px 3px 2px #888, -1px 3px 5px 3px rgb(255, 209, 179) inset;;
+    background-color: rgb(255, 239, 225);
 }
 
 .result h1 {
@@ -90,12 +95,15 @@ div.result, div.playerChoice, div.computerChoice {
     vertical-align: top;
 }
 
+.resultScreen .playerChoice button, .resultScreen .computerChoice button {
+    box-shadow: 0px 0px 5px 3px rgb(160, 93, 48, 0.5);
+}
+
 div.result {
     position: relative;
     vertical-align: top;
     height: 200px;
     width: 400px;
-    border: 1px solid #e7e7e7;
 }
 
 div.result h3 {
@@ -121,6 +129,8 @@ div button.fas, button {
     height: 100px;
     width: 100px;
     background-color: #e7e7e7;
+    box-shadow: 0px 0px 5px 3px rgb(160, 93, 48, 0.5);
+
 }
 
 button:focus {
@@ -135,24 +145,65 @@ button:focus {
 .lhs {
     margin-left: 100px;
     float: left;
+    border: 1px solid #888;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 0px 3px 2px #888, -1px 3px 5px 3px rgb(255, 209, 179) inset;;
+    background-color: rgb(255, 239, 225);
+    
 }
 
 .rhs {
     margin-right: 100px;
     float: right;
+    border: 1px solid #888;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 0px 3px 2px #888, -1px 3px 5px 3px rgb(255, 209, 179) inset;;
+    background-color: rgb(255, 239, 225);
+    
 }
 
 .lhs button.playerF, .rhs button.computerF {
-      background-image: radial-gradient(orange, rgb(230, 63, 63));
+      background-image: radial-gradient(orange, rgb(255, 68, 68), rgb(255, 0, 0));
 }
 
 .lhs button.playerF:hover {
-    background-color: rgb(255, 142, 90);
-    box-shadow: 0px 0px 20px 10px rgb(255, 122, 61);
+    background-image: radial-gradient(rgb(255, 197, 88), rgb(255, 110, 110));
+    box-shadow: 0px 0px 10px 10px rgb(255, 122, 61);
 }
 
 .lhs button.playerF:active {
-    background-color: rgb(255, 81, 0);
+    background-image: radial-gradient(rgb(255, 144, 39), rgb(255, 61, 61));
+    box-shadow: 0px 0px 10px 10px rgb(255, 74, 19);
+}
+
+.lhs button.playerW, .rhs button.computerW {
+    background-image: radial-gradient(rgb(154, 233, 253), rgb(22, 208, 255), rgb(0, 119, 255));
+}
+
+.lhs button.playerW:hover {
+    background-image: radial-gradient(rgb(199, 244, 255), rgb(125, 229, 255));
+    box-shadow: 0px 0px 10px 10px rgb(83, 218, 252);
+}
+
+.lhs button.playerW:active {
+    background-image: radial-gradient(rgb(159, 236, 255), rgb(60, 216, 255), rgb(57, 149, 255));
+    box-shadow: 0px 0px 10px 10px  rgb(86, 165, 255);
+}
+
+.lhs button.playerG, .rhs button.computerG {
+    background-image: radial-gradient(rgb(190, 241, 190), rgb(78, 219, 113), rgb(20, 238, 0));
+}
+
+.lhs button.playerG:hover {
+    background-image: radial-gradient(rgb(234, 245, 234), rgb(152, 228, 171), rgb(148, 238, 139));
+    box-shadow: 0px 0px 10px 10px rgb(90, 240, 76);
+}
+
+.lhs button.playerG:active {
+    background-image: radial-gradient(rgb(158, 238, 158), rgb(118, 224, 145), rgb(56, 219, 41));
+    box-shadow: 0px 0px 10px 10px rgb(47, 212, 32);
 }
 
 .replayBtn button {
@@ -162,4 +213,12 @@ button:focus {
     height: 30px;
     width: 30px;
     padding: 5px;
+}
+
+.replayBtn button:hover {
+    background-color: #ccc;
+}
+
+.replayBtn button:active {
+    background-color: #aaa;
 }

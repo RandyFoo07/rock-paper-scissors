@@ -1,3 +1,8 @@
+/* eliminate white space from making the page scrollable (effects of position relative on *selection* elements*/
+html, body {
+    height: 98%;
+}
+
 body {
     text-align: center;
     font-family: Helvetica, Arial, sans-serif;
@@ -12,8 +17,62 @@ h1#title {
     padding: 20px;
 }
 
+.hpBars {
+    margin-top: 100px;
+}
+
+.hpBars progress {
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgb(255, 255, 255) inset;
+    /* background-color: #e7e7e7; */
+}
+
+/* .hpBars progress[value]::-webkit-progress-bar {
+    background-image: lightgreen;
+} */
+
+.hpBars progress::before {
+    content: attr(value)'/'attr(max);
+    position: relative;
+    bottom: 8px;
+}
+
+.hpBars progress::-webkit-progress-value {
+    background-color: green;
+}
+
+.hpBars p {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    bottom: 5px;
+}
+
+.hpBarContainerP, .hpBarContainerC {
+    position: relative;
+    display: inline-block;
+    padding: 30px;
+    padding-top: 5px;
+    padding-bottom: 0;
+    border: 1px solid #888;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 0px 3px 2px #888, -1px 3px 5px 3px rgb(255, 209, 179) inset;;
+    background-color: rgb(255, 239, 225);
+    width: 200px;
+}
+
+.hpBarContainerP {
+    margin-right: 150px;
+}
+
+.hpBarContainerC {
+    margin-left: 150px;
+}
+
 .resultScreen {
-    margin: 100px 20px 0px 20px;
+    margin: 10px 20px 0px 20px;
     height: 200px;
 }
 
@@ -64,6 +123,15 @@ div button.fas, button {
     background-color: #e7e7e7;
 }
 
+button:focus {
+    outline: 0;
+}
+
+.lhs, .rhs {
+    position: relative;
+    bottom: 100px;
+}
+
 .lhs {
     margin-left: 100px;
     float: left;
@@ -72,6 +140,10 @@ div button.fas, button {
 .rhs {
     margin-right: 100px;
     float: right;
+}
+
+.lhs button.playerF, .rhs button.computerF {
+      background-image: radial-gradient(orange, rgb(230, 63, 63));
 }
 
 .lhs button.playerF:hover {
@@ -83,7 +155,11 @@ div button.fas, button {
     background-color: rgb(255, 81, 0);
 }
 
-/*things to google
-how to center elements of position absolute
-
-*/
+.replayBtn button {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    height: 30px;
+    width: 30px;
+    padding: 5px;
+}

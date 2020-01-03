@@ -1,10 +1,16 @@
 const buttons = Array.from(document.querySelectorAll('.lhs button'));
+const replayBtn = document.querySelector('.replayBtn button');
+const overallResult = document.querySelector('.result h1');
+const roundNum = document.querySelector('.result h2');
+const resultScreen = document.querySelector('.result h3');
+const playerHP = document.querySelector('#pHpBar');
+const computerHP = document.querySelector('#cHpBar');
+
 buttons.forEach(button => button.addEventListener('click', playGame));
+replayBtn.addEventListener('click', replayGame);
 
 let computerChoice = '';
 let playerChoice = '';
-let playerScore = 0;
-let computerScore = 0;
 let round = 1;
 
 function getRandomInt(max) {
@@ -53,39 +59,34 @@ function selectChoice(e) {
     playerC.className = className;
 }
 
+
 function playGame(e) {
-    if (round >= 6) {
+    if (playerHP.value <= 0 || computerHP.value <= 0) {
         return;
     }
 
     selectChoice(e);
 
-    const roundNum = document.querySelector('.result h2');
+    if (playerHP.value !== 0 && computerHP.value !== 0) {
 
-    if (round < 5) {
-        roundNum.textContent = `Round ${round}`;
-    } else if (round === 5) {
-        roundNum.textContent = 'Final Round';
-    }
-
-    const overallResult = document.querySelector('.result h1');
-
-    if (round <= 5) {
         playRound();
     }
-    if (round === 6) {
-        if (playerScore > computerScore) {
-            overallResult.textContent = 'Congratulations! You Won the Game!';
-        } else if (computerScore > playerScore) {
-            overallResult.textContent = 'Too Bad! You Lost the Game!';
-        } else {
-            overallResult.textContent = 'The Game ended in a Draw!';
-        }
+
+    console.log(playerHP.value);
+    console.log(computerHP.value);
+
+
+    if (computerHP.value === 0) {
+        overallResult.textContent = 'Congratulations! You Won the Game!';
+    }
+    if (playerHP.value === 0) {
+        overallResult.textContent = 'Too Bad! You Lost the Game';
     }
 }
 
 function playRound() {
-    const resultScreen = document.querySelector('.result h3');
+    roundNum.textContent = `Round ${round}`;
+
     if (computerChoice === 'Fire') {
         switch (playerChoice) {
             case 'Fire':
@@ -95,12 +96,12 @@ function playRound() {
             case 'Water':
                 resultScreen.textContent = `You Win! ${playerChoice} beats ${computerChoice}`;
                 round++;
-                playerScore++;
+                damageHP(computerHP, 20);
                 break;
             case 'Grass':
                 resultScreen.textContent = `You Lose! ${computerChoice} beats ${playerChoice}`;
                 round++;
-                computerScore++;
+                damageHP(playerHP, 20);
                 break;
         }
     } else if (computerChoice === 'Water') {
@@ -112,12 +113,12 @@ function playRound() {
             case 'Grass':
                 resultScreen.textContent = `You Win! ${playerChoice} beats ${computerChoice}`;
                 round++;
-                playerScore++;
+                damageHP(computerHP, 20);
                 break;
             case 'Fire':
                 resultScreen.textContent = `You Lose! ${computerChoice} beats ${playerChoice}`;
                 round++;
-                computerScore++;
+                damageHP(playerHP, 20);
                 break;
         }
     } else if (computerChoice === 'Grass') {
@@ -129,15 +130,37 @@ function playRound() {
             case 'Fire':
                 resultScreen.textContent = `You Win! ${playerChoice} beats ${computerChoice}`;
                 round++;
-                playerScore++;
+                damageHP(computerHP, 20);
                 break;
             case 'Water':
                 resultScreen.textContent = `You Lose! ${computerChoice} beats ${playerChoice}`;
                 round++;
-                computerScore++;
+                damageHP(playerHP, 20);
                 break;
         }
     }
 }
+
+
+function replayGame() {
+    computerChoice = '';
+    playerChoice = '';
+    round = 1;
+    resultScreen.textContent = '';
+    overallResult.textContent = '';
+    roundNum.textContent = '';
+    playerHP.value = 100;
+    computerHP.value = 100;
+}
+
+function damageHP(HP, damage) {
+    HP.value -= damage;
+    // if (HP.value <= 50) {
+    //     HP[value].style.backgroundColor = 'rgb(255, 145, 0)';
+    // }
+    return HP;
+
+}
+
 
 //replay button

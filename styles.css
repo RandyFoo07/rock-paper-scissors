@@ -38,9 +38,9 @@ h1#title {
     bottom: 8px;
 }
 
-.hpBars progress::-webkit-progress-value {
+/* .hpBars progress::-webkit-progress-value {
     background-color: green;
-}
+} */
 
 .hpBars p {
     position: relative;

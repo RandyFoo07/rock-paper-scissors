@@ -108,12 +108,11 @@ function playGame(e) {
     console.log(playerHP.value);
     console.log(computerHP.value);
 
-
     if (computerHP.value === 0) {
-        overallResult.textContent = 'Congrats! You Won the Game!';
+        overallResult.textContent = 'You Won!';
     }
     if (playerHP.value === 0) {
-        overallResult.textContent = 'Too Bad! You Lost the Game!';
+        overallResult.textContent = 'You Lost!';
     }
 }
 
@@ -174,7 +173,6 @@ function playRound() {
     }
 }
 
-
 function replayGame() {
     computerChoice = '';
     playerChoice = '';
@@ -200,13 +198,5 @@ function replayGame() {
 
 function damageHP(HP, damage) {
     HP.value -= damage;
-    // if (HP.value <= 50) {
-    //     HP[value].style.backgroundColor = 'rgb(255, 145, 0)';
-    // }
     return HP;
-
 }
-
-
-
-//replay button

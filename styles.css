@@ -1,4 +1,3 @@
-/* eliminate white space from making the page scrollable (effects of position relative on *selection* elements*/
 @font-face {
     font-family: oldSchoolFont;
     src: url(assets/orange_kid.otf);
@@ -14,8 +13,13 @@ body {
     background-image: url(assets/background1.jpg);
 }
 
+header {
+    position: relative;
+}
+
 h1#title {
     font-family: oldSchoolFont;
+    font-size: 30px;
     letter-spacing: 2px;
     color: #111;
     text-shadow: 3px 3px #888;
@@ -24,6 +28,15 @@ h1#title {
     margin-bottom: 0px;
     padding: 20px;
     padding-top: 0;
+    padding-bottom: 0;
+}
+
+header img {
+    position: absolute;
+    right: 350px;
+    top: 95px;
+    width: 200px;
+    height: auto;
 }
 
 .hpBars {
@@ -34,11 +47,14 @@ h1#title {
     text-align: center;
     padding: 10px;
     box-shadow: 0 2px 5px rgb(255, 255, 255) inset;
-    /* background-color: #e7e7e7; */
 }
 
 /* .hpBars progress[value]::-webkit-progress-bar {
     background-image: lightgreen;
+} */
+
+/* .hpBars progress::-webkit-progress-value {
+    background-color: green;
 } */
 
 .hpBars progress::before {
@@ -47,10 +63,6 @@ h1#title {
     position: relative;
     bottom: 8px;
 }
-
-/* .hpBars progress::-webkit-progress-value {
-    background-color: green;
-} */
 
 .hpBars p {
     font-family: oldSchoolFont;
@@ -80,6 +92,10 @@ h1#title {
 
 .hpBarContainerC {
     margin-left: 150px;
+}
+
+#pHpBar[value], #cHpBar[value] {
+    /* background: green; */
 }
 
 .resultScreen {

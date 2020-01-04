@@ -20,9 +20,10 @@ h1#title {
     color: #111;
     text-shadow: 3px 3px #888;
     font-size: 100px;
-    margin: 20px;
+    margin-top: 0;
     margin-bottom: 0px;
     padding: 20px;
+    padding-top: 0;
 }
 
 .hpBars {

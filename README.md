@@ -1,5 +1,6 @@
 # rock-paper-scissors
 ## Status: Incomplete
+Mobile Responsive Version TBD
 ## Notable Outcomes
 ### HTML5
 * Use element **progress** to create health bars for player and computer

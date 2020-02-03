@@ -141,8 +141,7 @@ div.lhs p, div.rhs p {
 
 div button.fas, button {
     display: block;
-    padding: 20px;
-    margin: 50px 20px;
+    margin: 30% 20px;
     border: 1px solid transparent;
     border-radius: 50px;
     height: 100px;
@@ -228,6 +227,7 @@ button:focus {
     height: 30px;
     width: 30px;
     padding: 5px;
+    margin: 2% 2%;
 }
 
 .replayBtn button:hover {

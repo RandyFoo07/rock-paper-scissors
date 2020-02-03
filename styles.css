@@ -4,15 +4,16 @@
     src: url(assets/orange_kid.otf);
 }
 
-/* Set page height to avoid scrolling*/
 html, body {
-    height: 98%;
+    height: 100%;
 }
 
 body {
     text-align: center;
     font-family: Helvetica, Arial, sans-serif;
     background-image: url(assets/background1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 /*header section*/
@@ -32,7 +33,7 @@ h1#title {
 
 /*HP Bars section*/
 .hpBars {
-    margin-top: 100px;
+    margin-top: 3%;
 }
 
 .hpBars progress {
@@ -40,7 +41,6 @@ h1#title {
     padding: 10px;
     box-shadow: 0 2px 5px rgb(255, 255, 255) inset;
 }
-
 
 .hpBars progress::before {
     font-family: oldSchoolFont;
@@ -68,15 +68,19 @@ h1#title {
     border-bottom-right-radius: 20px;
     box-shadow: 0px 0px 3px 2px #888, -1px 3px 5px 3px rgb(255, 209, 179) inset;;
     background-color: rgb(255, 239, 225);
-    width: 200px;
+    width: 12%;
 }
 
 .hpBarContainerP {
-    margin-right: 150px;
+    margin-right: 7%;
 }
 
 .hpBarContainerC {
-    margin-left: 150px;
+    margin-left: 7%;
+}
+
+#pHpBar, #cHpBar {
+    width: 80%;
 }
 
 /* middle result screen section*/
@@ -155,11 +159,10 @@ button:focus {
 
 .lhs, .rhs {
     position: relative;
-    bottom: 100px;
 }
 
 .lhs {
-    margin-left: 100px;
+    margin-left: 5%;
     float: left;
     border: 1px solid #888;
     border-top-left-radius: 20px;
@@ -169,7 +172,7 @@ button:focus {
 }
 
 .rhs {
-    margin-right: 100px;
+    margin-right: 5%;
     float: right;
     border: 1px solid #888;
     border-top-left-radius: 20px;

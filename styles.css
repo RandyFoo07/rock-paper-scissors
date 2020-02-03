@@ -88,21 +88,19 @@ h1#title {
     font-family: oldSchoolFont;
     margin: 10px 20px 0px 20px;
     height: 200px;
+    width: 40%;
     border: 1px solid #888;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
     box-shadow: 0px 0px 3px 2px #888, -1px 3px 5px 3px rgb(255, 209, 179) inset;;
     background-color: rgb(255, 239, 225);
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .result h1 {
     font-family: oldSchoolFont;
     font-size: 30px;
-}
-
-.resultScreen {
-    display: inline-block;
-    vertical-align: middle;
 }
 
 div.result, div.playerChoice, div.computerChoice {
@@ -120,8 +118,8 @@ div.result {
     letter-spacing: 2px;
     position: relative;
     vertical-align: top;
-    height: 200px;
-    width: 400px;
+    height: 100%;
+    width: 50%;
 }
 
 div.result h3 {

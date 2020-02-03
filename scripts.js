@@ -79,12 +79,8 @@ function playGame(e) {
     selectChoice(e);
 
     if (playerHP.value !== 0 && computerHP.value !== 0) {
-
         playRound();
     }
-
-    console.log(playerHP.value);
-    console.log(computerHP.value);
 
     if (computerHP.value === 0) {
         overallResult.textContent = 'You Won!';

@@ -16,10 +16,6 @@ body {
 }
 
 /*header section*/
-header {
-    position: relative;
-}
-
 h1#title {
     font-family: oldSchoolFont;
     font-size: 30px;
@@ -32,14 +28,6 @@ h1#title {
     padding: 20px;
     padding-top: 0;
     padding-bottom: 0;
-}
-
-header img {
-    position: absolute;
-    right: 350px;
-    top: 95px;
-    width: 200px;
-    height: auto;
 }
 
 /*HP Bars section*/

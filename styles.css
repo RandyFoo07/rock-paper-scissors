@@ -156,6 +156,7 @@ button:focus {
 
 .lhs, .rhs {
     position: relative;
+    bottom: 60px;
 }
 
 .lhs {

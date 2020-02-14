@@ -15,6 +15,11 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
+/*main UI*/
+.mainUI {
+    /* display: flex; */
+    margin-top: 5em;
+}
 
 /*header section*/
 h1#title {
@@ -28,55 +33,39 @@ h1#title {
 }
 
 /*HP Bars section*/
-.hpBars {
-    margin-top: 3%;
-}
 
-.hpBars progress {
+
+progress {
     text-align: center;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgb(255, 255, 255) inset;
+    padding: 0.6em;
+    box-shadow: 0 0.2rem 0.5rem rgb(255, 255, 255) inset;
 }
 
-.hpBars progress::before {
+progress::before {
     font-family: oldSchoolFont;
     content: attr(value)'/'attr(max);
     position: relative;
-    bottom: 8px;
+    bottom: 0.5rem;
 }
 
-.hpBars p {
+.hpBarContainerP p, .hpBarContainerC p {
+    display: inline-block;
     font-family: oldSchoolFont;
     position: relative;
-    display: inline-block;
     margin: 0;
-    bottom: 5px;
+    bottom: 0.5rem;
 }
 
 .hpBarContainerP, .hpBarContainerC {
-    position: relative;
     display: inline-block;
-    padding: 30px;
-    padding-top: 5px;
-    padding-bottom: 0;
+    position: relative;
+    padding-top: 0.5em;
     border: 1px solid #888;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
     box-shadow: 0px 0px 3px 2px #888, -1px 3px 5px 3px rgb(255, 209, 179) inset;;
     background-color: rgb(255, 239, 225);
     width: 12%;
-}
-
-.hpBarContainerP {
-    margin-right: 7%;
-}
-
-.hpBarContainerC {
-    margin-left: 7%;
-}
-
-#pHpBar, #cHpBar {
-    width: 80%;
 }
 
 /* middle result screen section*/

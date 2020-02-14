@@ -48,7 +48,7 @@ function selectChoice(e) {
         computerChoice = 'Fire';
     } else if (compC === 'Water') {
         setNewButtonWater(computerC);
-        setButtonHoverGrass(compButtonW);
+        setButtonHoverWater(compButtonW);
         computerChoice = 'Water';
     } else if (compC === 'Grass') {
         setNewButtonGrass(computerC);

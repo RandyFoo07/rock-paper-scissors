@@ -39,6 +39,7 @@ progress {
     text-align: center;
     padding: 0.6em;
     box-shadow: 0 0.2rem 0.5rem rgb(255, 255, 255) inset;
+    width: 80%;
 }
 
 progress::before {

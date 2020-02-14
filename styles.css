@@ -70,8 +70,8 @@ progress::before {
 
 /* middle result screen section*/
 .resultScreen {
+    display: inline-block;
     font-family: oldSchoolFont;
-    margin: 10px 20px 0px 20px;
     height: 200px;
     width: 40%;
     border: 1px solid #888;
@@ -79,13 +79,14 @@ progress::before {
     border-bottom-right-radius: 20px;
     box-shadow: 0px 0px 3px 2px #888, -1px 3px 5px 3px rgb(255, 209, 179) inset;;
     background-color: rgb(255, 239, 225);
-    display: inline-block;
     vertical-align: middle;
 }
 
 .result h1 {
     font-family: oldSchoolFont;
-    font-size: 30px;
+    font-size: 2rem;
+    margin-top: 0.5em;
+    margin-bottom: 0;
 }
 
 div.result, div.playerChoice, div.computerChoice {
@@ -99,8 +100,8 @@ div.result, div.playerChoice, div.computerChoice {
 
 div.result {
     font-family: oldSchoolFont;
-    font-size: 20px;
-    letter-spacing: 2px;
+    font-size: 1.5rem;
+    letter-spacing: 0.15rem;
     position: relative;
     vertical-align: top;
     height: 100%;
@@ -109,9 +110,7 @@ div.result {
 
 div.result h3 {
     position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    bottom: 10px;
+    margin: 0.5em;
     left: 0;
     right: 0;
 }

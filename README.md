@@ -1,5 +1,8 @@
 # rock-paper-scissors
-## Notable Outcomes
+A browser/mobile friendly rock paper scissors game with pokemon elements.
+
+## Notable Outcomes 
+**Pre-Mobile Responsive Version**
 ### HTML5
 * Use element **progress** to create health bars for player and computer
 
@@ -10,7 +13,11 @@
 * Use property **background-image** with value `radial-gradient(rgb, rgb, (rgb))` to create smooth transition between colors
 
 ### JavaScript
-* Manipulate the DOM by using object-oriented programming practices, converting a console-only version of rock paper scissors to a version playable in a web browser.
+* Use DOM Manipulation to give buttons functionality
 
-#### Possible Future Implementations
-Mobile Responsive Version
+**Mobile Responsive Version**
+### CSS3
+* Use `rem` for font-sizes to avoid cascading effect by getting font-size of root element
+* Use `em` for paddings/margins for cascading effect when scaling with font-size
+* Use `%` and `px` for heights/widths
+* Use *Flexbox* and *Grid* to layout main elements of the page

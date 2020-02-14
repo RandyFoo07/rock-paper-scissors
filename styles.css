@@ -257,3 +257,9 @@ button:focus {
 /*  #pHpBar[value], #cHpBar[value] {
      background: green; 
 }*/    
+
+@media (max-height: 750px) {
+    .mainUI {
+        margin-top: 0;
+    }
+}

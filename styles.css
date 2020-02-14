@@ -17,8 +17,11 @@ body {
 }
 /*main UI*/
 .mainUI {
-    /* display: flex; */
-    margin-top: 5em;
+    display: flex;
+    margin-top: 2em;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 /*header section*/
@@ -58,29 +61,49 @@ progress::before {
 }
 
 .hpBarContainerP, .hpBarContainerC {
-    display: inline-block;
-    position: relative;
-    padding-top: 0.5em;
+    padding: 0.5em 0 0.2em 0.2em;
+    margin-bottom: 1em;
     border: 1px solid #888;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
     box-shadow: 0px 0px 3px 2px #888, -1px 3px 5px 3px rgb(255, 209, 179) inset;;
     background-color: rgb(255, 239, 225);
-    width: 12%;
+    width: 80%;
+}
+
+.hpBarContainerP {
+    justify-self: start;
+    align-self: start;
+}
+
+.hpBarContainerC {
+    justify-self: end;
+    align-self: start;
 }
 
 /* middle result screen section*/
+.mainScreen {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 1fr auto;
+    margin-bottom: 9em;
+}
+
 .resultScreen {
-    display: inline-block;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
     font-family: oldSchoolFont;
     height: 200px;
-    width: 40%;
+    width: 100%;
     border: 1px solid #888;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
     box-shadow: 0px 0px 3px 2px #888, -1px 3px 5px 3px rgb(255, 209, 179) inset;;
     background-color: rgb(255, 239, 225);
     vertical-align: middle;
+    grid-column-start: span 2;
+
 }
 
 .result h1 {
@@ -93,9 +116,8 @@ progress::before {
     margin: 0.5em 0;
 }
 
-div.result, div.playerChoice, div.computerChoice {
-    display: inline-block;
-    vertical-align: top;
+div.playerChoice, div.computerChoice {
+    align-self: center;
 }
 
 .resultScreen .playerChoice button, .resultScreen .computerChoice button {
@@ -121,14 +143,14 @@ div.result h3 {
 /* player/computer choice selection + buttons section*/
 div.lhs p, div.rhs p {
     font-family: oldSchoolFont;
-    letter-spacing: 2px;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
     font-weight: bold;
-    font-size: 25px;
 }
 
 div button.fas, button {
     display: block;
-    margin: 30% 20px;
+    margin: 0.4em 0.4em;
     border: 1px solid transparent;
     border-radius: 50px;
     height: 100px;
@@ -142,13 +164,12 @@ button:focus {
 }
 
 .lhs, .rhs {
+    display: flex;
+    flex-direction: column;
     position: relative;
-    bottom: 60px;
 }
 
 .lhs {
-    margin-left: 5%;
-    float: left;
     border: 1px solid #888;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -157,8 +178,6 @@ button:focus {
 }
 
 .rhs {
-    margin-right: 5%;
-    float: right;
     border: 1px solid #888;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -211,10 +230,10 @@ button:focus {
 .replayBtn button {
     position: absolute;
     top: 0;
-    left: 10px;
-    height: 30px;
-    width: 30px;
-    padding: 5px;
+    left: 1em;
+    height: 2em;
+    width: 2em;
+    padding: 0.3em;
     margin: 2% 2%;
 }
 

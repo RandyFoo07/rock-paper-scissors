@@ -21,3 +21,4 @@ A browser/mobile friendly rock paper scissors game with pokemon elements.
 * Use `em` for paddings/margins for cascading effect when scaling with font-size
 * Use `%` and `px` for heights/widths
 * Use *Flexbox* and *Grid* to layout main elements of the page
+* Use media queries for tailored styling to multiple devices

@@ -263,7 +263,7 @@ button:focus {
         font-size: 90%;
     }
     .mainUI {
-        margin-top: -2em;
+        margin-top: -1em;
     }
 }
 
@@ -299,9 +299,9 @@ button:focus {
 }
 
 /*large phones*/
-/* @media (max-width: 950px) and (max-height: 599px) {
+@media (max-width: 450px) and (min-height: 600px) {
     html {
-        font-size: 45%;
+        font-size: 60%;
     }
     .mainUI {
         flex-direction: column;
@@ -318,6 +318,7 @@ button:focus {
     .mainScreen {
         margin: 10% 0;
     }
-} */
+    
+}
 
 /*small phones*/

@@ -334,7 +334,9 @@ button:focus {
         margin-top: 1em;
         font-size: 2rem;
     }
-    
+    .resultScreen .result{
+        font-size: 1.5rem;
+    }
 }
 
 /*small phones*/
@@ -374,6 +376,9 @@ button:focus {
     .replayBtn button {
         margin-top: 1em;
         font-size: 2rem;
+    }
+    .resultScreen .result{
+        font-size: 1.5rem;
     }
     
 }

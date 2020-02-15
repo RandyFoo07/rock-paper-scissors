@@ -151,6 +151,7 @@ div.lhs p, div.rhs p {
 div button.fas, button {
     margin: 0.4em 0.4em;
     border: 1px solid transparent;
+    text-align: center;
     font-size: 3rem;
     border-radius: 50%;
     height: 2em;

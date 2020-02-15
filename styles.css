@@ -257,8 +257,11 @@ button:focus {
      background: green; 
 }*/    
 
-/*small laptops*/
+/*small laptops/ tablets (landscape)*/
 @media (max-height: 750px) {
+    html {
+        font-size: 90%;
+    }
     .mainUI {
         margin-top: -2em;
     }

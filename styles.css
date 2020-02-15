@@ -300,7 +300,7 @@ button:focus {
 /*large phones*/
 @media (max-width: 450px) and (min-height: 600px) {
     html {
-        font-size: 55%;
+        font-size: 50%;
     }
     .mainUI {
         flex-direction: column;

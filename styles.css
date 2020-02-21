@@ -1,22 +1,37 @@
+html {
+    height: 100%;
+}
+
+
+
+/* ==========
+Typography
+============ */
+
 /* Custom font*/
 @font-face {
     font-family: oldSchoolFont;
     src: url(assets/orange_kid.otf);
 }
 
-html {
-    height: 100%;
+body {
+    font-family: Helvetica, Arial, sans-serif;
 }
+
+
+
+/* ==========
+Layout
+============ */
 
 body {
     text-align: center;
-    font-family: Helvetica, Arial, sans-serif;
     background-image: url(assets/background1.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-/*main UI*/
-.mainUI {
+
+.container {
     display: flex;
     margin-top: 2em;
     width: 100%;
@@ -52,7 +67,7 @@ progress::before {
     bottom: 0.5rem;
 }
 
-.hpBarContainerP p, .hpBarContainerC p {
+.player-health-container p, .computer-health-container p {
     display: inline-block;
     font-family: oldSchoolFont;
     position: relative;
@@ -60,7 +75,7 @@ progress::before {
     bottom: 0.5rem;
 }
 
-.hpBarContainerP, .hpBarContainerC {
+.player-health-container, .computer-health-container {
     padding: 0.5em 0 0.2em 0.2em;
     margin-bottom: 1em;
     border: 1px solid #888;
@@ -71,25 +86,25 @@ progress::before {
     width: 80%;
 }
 
-.hpBarContainerP {
+.player-health-container {
     justify-self: start;
     align-self: start;
 }
 
-.hpBarContainerC {
+.computer-health-container {
     justify-self: end;
     align-self: start;
 }
 
-/* middle result screen section*/
-.mainScreen {
+/* middle result-text screen section*/
+.box-middle {
     display: grid;
     grid-template-columns: 20em 20em;
     grid-template-rows: 1fr auto;
     margin-bottom: 9em;
 }
 
-.resultScreen {
+.box-result {
     display: flex;
     justify-content: space-around;
     align-content: center;
@@ -106,25 +121,25 @@ progress::before {
 
 }
 
-.result h1 {
+.result-text h1 {
     font-family: oldSchoolFont;
     font-size: 2rem;
     margin: 0;
 }
 
-.result h2 {
+.result-text h2 {
     margin: 0.5em 0;
 }
 
-div.playerChoice, div.computerChoice {
+div.player-button-choice, div.computer-button-choice {
     align-self: center;
 }
 
-.resultScreen .playerChoice button, .resultScreen .computerChoice button {
+.box-result .player-button-choice button, .box-result .computer-button-choice button {
     box-shadow: 0px 0px 5px 3px rgb(160, 93, 48, 0.5);
 }
 
-.mainScreen .result {
+.box-middle .result-text {
     font-family: oldSchoolFont;
     font-size: 1.5rem;
     letter-spacing: 0.15rem;
@@ -133,7 +148,7 @@ div.playerChoice, div.computerChoice {
     width: 50%;
 }
 
-div.result h3 {
+div.result-text h3 {
     position: absolute;
     margin: 0.5em;
     left: 0;
@@ -141,7 +156,7 @@ div.result h3 {
 }
 
 /* player/computer choice selection + buttons section*/
-div.lhs p, div.rhs p {
+.box-left p, .box-right p {
     font-family: oldSchoolFont;
     font-size: 1.5rem;
     letter-spacing: 0.2rem;
@@ -164,13 +179,13 @@ button:focus {
     outline: 0;
 }
 
-.lhs, .rhs {
+.box-left, .box-right {
     display: flex;
     flex-direction: column;
     position: relative;
 }
 
-.lhs {
+.box-left {
     border: 1px solid #888;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -178,7 +193,7 @@ button:focus {
     background-color: rgb(255, 239, 225);
 }
 
-.rhs {
+.box-right {
     border: 1px solid #888;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -186,49 +201,49 @@ button:focus {
     background-color: rgb(255, 239, 225)    
 }
 
-.lhs button.playerF, .rhs button.computerF {
+.box-left button.player-fire, .box-right button.computer-fire {
     background-image: radial-gradient(orange, rgb(255, 68, 68), rgb(255, 0, 0));
 }
     
-.lhs button.playerF:hover {
+.box-left button.player-fire:hover {
     background-image: radial-gradient(rgb(255, 197, 88), rgb(255, 110, 110));
     box-shadow: 0px 0px 10px 10px rgb(255, 122, 61);
 }
 
-.lhs button.playerF:active {
+.box-left button.player-fire:active {
     background-image: radial-gradient(rgb(255, 144, 39), rgb(255, 61, 61));
     box-shadow: 0px 0px 10px 10px rgb(255, 74, 19);
 }
 
-.lhs button.playerW, .rhs button.computerW {
+.box-left button.player-water, .box-right button.computer-water {
     background-image: radial-gradient(rgb(154, 233, 253), rgb(22, 208, 255), rgb(0, 119, 255));
 }
 
-.lhs button.playerW:hover {
+.box-left button.player-water:hover {
     background-image: radial-gradient(rgb(199, 244, 255), rgb(125, 229, 255));
     box-shadow: 0px 0px 10px 10px rgb(83, 218, 252);
 }
 
-.lhs button.playerW:active {
+.box-left button.player-water:active {
     background-image: radial-gradient(rgb(159, 236, 255), rgb(60, 216, 255), rgb(57, 149, 255));
     box-shadow: 0px 0px 10px 10px  rgb(86, 165, 255);
 }
 
-.lhs button.playerG, .rhs button.computerG {
+.box-left button.player-grass, .box-right button.computer-grass {
     background-image: radial-gradient(rgb(190, 241, 190), rgb(78, 219, 113), rgb(20, 238, 0));
 }
 
-.lhs button.playerG:hover {
+.box-left button.player-grass:hover {
     background-image: radial-gradient(rgb(234, 245, 234), rgb(152, 228, 171), rgb(148, 238, 139));
     box-shadow: 0px 0px 10px 10px rgb(90, 240, 76);
 }
 
-.lhs button.playerG:active {
+.box-left button.player-grass:active {
     background-image: radial-gradient(rgb(158, 238, 158), rgb(118, 224, 145), rgb(56, 219, 41));
     box-shadow: 0px 0px 10px 10px rgb(47, 212, 32);
 }
 
-.replayBtn button {
+.button-replay button {
     position: absolute;
     font-size: 1rem;
     top: 0;
@@ -236,11 +251,11 @@ button:focus {
     margin: 2% 2%;
 }
 
-.replayBtn button:hover {
+.button-replay button:hover {
     background-color: #ccc;
 }
 
-.replayBtn button:active {
+.button-replay button:active {
     background-color: #aaa;
 }
 
@@ -253,7 +268,7 @@ button:focus {
     background-color: green;
 } */
 
-/*  #pHpBar[value], #cHpBar[value] {
+/*  #player-health[value], #computer-health[value] {
      background: green; 
 }*/    
 
@@ -262,7 +277,7 @@ button:focus {
     html {
         font-size: 90%;
     }
-    .mainUI {
+    .container {
         margin-top: -1em;
     }
 }
@@ -272,11 +287,11 @@ button:focus {
     html {
         font-size: 100%;
     }
-    .mainUI {
+    .container {
         flex-direction: column;
         margin-top: 2em;
     }
-    .lhs, .rhs {
+    .box-left, .box-right {
         flex-direction: row;
         align-items: center;
         padding-left: 1rem;
@@ -284,7 +299,7 @@ button:focus {
     img {
         width: 14em;
     }
-    .mainScreen {
+    .box-middle {
         margin: 10% 0;
     }
 
@@ -292,7 +307,7 @@ button:focus {
         font-size: 5rem;
     }
 
-    .replayBtn button {
+    .button-replay button {
         margin-top: 1em;
         font-size: 2rem;
     }
@@ -303,11 +318,11 @@ button:focus {
     html {
         font-size: 50%;
     }
-    .mainUI {
+    .container {
         flex-direction: column;
         margin-top: 5em;
     }
-    .lhs, .rhs {
+    .box-left, .box-right {
         flex-direction: row;
         align-items: center;
         padding-left: 1rem;
@@ -315,27 +330,27 @@ button:focus {
     div button.fas, button {
         font-size: 4rem;
     }
-    .hpBarContainerP, .hpBarContainerC {
+    .player-health-container, .computer-health-container {
         font-size: 1.5rem;
     }
     img {
         width: 16em;
     }
-    .mainScreen {
+    .box-middle {
         margin: 10% 0;
         grid-template-rows: 1fr auto 1fr;
     }
-    .hpBarContainerC {
+    .computer-health-container {
         grid-column-start: 2;
         grid-row-start: 3;
         margin-bottom: 0;
         align-self: end;
     }
-    .replayBtn button {
+    .button-replay button {
         margin-top: 1em;
         font-size: 2rem;
     }
-    .resultScreen .result{
+    .box-result .result-text{
         font-size: 1.5rem;
     }
 }
@@ -346,11 +361,11 @@ button:focus {
     html {
         font-size: 40%;
     }
-    .mainUI {
+    .container {
         flex-direction: column;
         margin-top: 5em;
     }
-    .lhs, .rhs {
+    .box-left, .box-right {
         flex-direction: row;
         align-items: center;
         padding-left: 1rem;
@@ -358,27 +373,27 @@ button:focus {
     div button.fas, button {
         font-size: 4rem;
     }
-    .hpBarContainerP, .hpBarContainerC {
+    .player-health-container, .computer-health-container {
         font-size: 1.5rem;
     }
     img {
         width: 16em;
     }
-    .mainScreen {
+    .box-middle {
         margin: 10% 0;
         grid-template-rows: 1fr auto 1fr;
     }
-    .hpBarContainerC {
+    .computer-health-container {
         grid-column-start: 2;
         grid-row-start: 3;
         margin-bottom: 0;
         align-self: end;
     }
-    .replayBtn button {
+    .button-replay button {
         margin-top: 1em;
         font-size: 2rem;
     }
-    .resultScreen .result{
+    .box-result .result-text{
         font-size: 1.5rem;
     }
     

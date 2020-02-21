@@ -1,18 +1,18 @@
-const buttons = Array.from(document.querySelectorAll('.lhs button'));
-const compButtonF = document.querySelector('.rhs button.computerF');
-const compButtonW = document.querySelector('.rhs button.computerW');
-const compButtonG = document.querySelector('.rhs button.computerG');
-const replayBtn = document.querySelector('.replayBtn button');
-const overallResult = document.querySelector('.result h1');
-const roundNum = document.querySelector('.result h2');
-const resultScreen = document.querySelector('.result h3');
-const playerHP = document.querySelector('#pHpBar');
-const computerHP = document.querySelector('#cHpBar');
-const playerC = document.querySelector('.playerChoice button');
-const computerC = document.querySelector('.computerChoice button');
+const buttons = Array.from(document.querySelectorAll('.box-left button'));
+const compButtonF = document.querySelector('.box-right button.computer-fire');
+const compButtonW = document.querySelector('.box-right button.computer-water');
+const compButtonG = document.querySelector('.box-right button.computer-grass');
+const buttonReplay = document.querySelector('.button-replay button');
+const overallResult = document.querySelector('.result-text h1');
+const roundNum = document.querySelector('.result-text h2');
+const boxResult = document.querySelector('.result-text h3');
+const playerHP = document.querySelector('#player-health');
+const computerHP = document.querySelector('#computer-health');
+const playerC = document.querySelector('.player-button-choice button');
+const computerC = document.querySelector('.computer-button-choice button');
 
 buttons.forEach(button => button.addEventListener('click', playGame));
-replayBtn.addEventListener('click', replayGame);
+buttonReplay.addEventListener('click', replayGame);
 
 let computerChoice = '';
 let playerChoice = '';
@@ -56,13 +56,13 @@ function selectChoice(e) {
         computerChoice = 'Grass';
     }
 
-    if (className === 'playerF fas fa-fire fa-3x') {
+    if (className === 'player-fire fas fa-fire fa-3x') {
         setNewButtonFire(playerC);
         playerChoice = 'Fire';
-    } else if (className === 'playerW fas fa-tint fa-3x') {
+    } else if (className === 'player-water fas fa-tint fa-3x') {
         setNewButtonWater(playerC);
         playerChoice = 'Water';
-    } else if (className === 'playerG fas fa-leaf fa-3x') {
+    } else if (className === 'player-grass fas fa-leaf fa-3x') {
         setNewButtonGrass(playerC);
         playerChoice = 'Grass';
     }
@@ -96,42 +96,42 @@ function playRound() {
     if (computerChoice === 'Fire') {
         switch (playerChoice) {
             case 'Fire':
-                showDrawResult(resultScreen);
+                showDrawResult(boxResult);
                 break;
             case 'Water':
-                showWinResult(resultScreen);
+                showWinResult(boxResult);
                 damageHP(computerHP, 20);
                 break;
             case 'Grass':
-                showLoseResult(resultScreen);
+                showLoseResult(boxResult);
                 damageHP(playerHP, 20);
                 break;
         }
     } else if (computerChoice === 'Water') {
         switch (playerChoice) {
             case 'Water':
-                showDrawResult(resultScreen);
+                showDrawResult(boxResult);
                 break;
             case 'Grass':
-                showWinResult(resultScreen);
+                showWinResult(boxResult);
                 damageHP(computerHP, 20);
                 break;
             case 'Fire':
-                showLoseResult(resultScreen);
+                showLoseResult(boxResult);
                 damageHP(playerHP, 20);
                 break;
         }
     } else if (computerChoice === 'Grass') {
         switch (playerChoice) {
             case 'Grass':
-                showDrawResult(resultScreen);
+                showDrawResult(boxResult);
                 break;
             case 'Fire':
-                showWinResult(resultScreen);
+                showWinResult(boxResult);
                 damageHP(computerHP, 20);
                 break;
             case 'Water':
-                showLoseResult(resultScreen);
+                showLoseResult(boxResult);
                 damageHP(playerHP, 20);
                 break;
         }
@@ -144,7 +144,7 @@ function replayGame() {
     computerC.className = '';
     playerC.className = '';
     round = 1;
-    resultScreen.textContent = '';
+    boxResult.textContent = '';
     overallResult.textContent = '';
     roundNum.textContent = '';
     playerHP.value = 100;
@@ -173,19 +173,19 @@ function resetSelection() {
 }
 
 function setNewButtonFire(button) {
-    button.className = 'computerF fas fa-fire fa-3x';
+    button.className = 'computer-fire fas fa-fire fa-3x';
     button.style.backgroundImage = 'radial-gradient(rgb(255, 144, 39), rgb(255, 61, 61))';
     button.style.boxShadow = '0px 0px 10px 10px rgb(255, 74, 19)';
 }
 
 function setNewButtonWater(button) {
-    button.className = 'computerW fas fa-tint fa-3x';
+    button.className = 'computer-water fas fa-tint fa-3x';
     button.style.backgroundImage = 'radial-gradient(rgb(159, 236, 255), rgb(60, 216, 255), rgb(57, 149, 255))';
     button.style.boxShadow = '0px 0px 10px 10px  rgb(86, 165, 255)';
 }
 
 function setNewButtonGrass(button) {
-    button.className = 'computerG fas fa-leaf fa-3x';
+    button.className = 'computer-grass fas fa-leaf fa-3x';
     button.style.backgroundImage = 'radial-gradient(rgb(158, 238, 158), rgb(118, 224, 145), rgb(56, 219, 41))';
     button.style.boxShadow = '0px 0px 10px 10px rgb(47, 212, 32)';
 }

@@ -11,65 +11,65 @@
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
 </head>
 
 <body>
     <header>
         <h1 id="title">Rock Paper Scissors</h1>
-        <img src="assets/pokemonedition.png" alt="pokemon version">
+        <img src="assets/pokemonedition.png" alt="pokemon edition">
     </header>
 
     <main>
-        <section class="mainUI">
+        <div class="container">
 
-            <div class="lhs">
+            <section class="box-left">
                 <p>You</p>
-                <button class="playerF fas fa-fire fa-3x"></button>
-                <button class="playerW fas fa-tint fa-3x"></button>
-                <button class="playerG fas fa-leaf fa-3x"></button>
-            </div>
+                <button class="player-fire fas fa-fire fa-3x"></button>
+                <button class="player-water fas fa-tint fa-3x"></button>
+                <button class="player-grass fas fa-leaf fa-3x"></button>
+            </section>
 
 
-            <section class="mainScreen">
-                <div class="hpBarContainerP">
+            <section class="box-middle">
+                <div class="player-health-container">
                     <p>HP:</p>
-                    <progress id="pHpBar" value="100" max="100">
+                    <progress id="player-health" value="100" max="100">
                     </progress>
                 </div>
-                <div class="hpBarContainerC">
+                <div class="computer-health-container">
                     <p>HP:</p>
-                    <progress id="cHpBar" value="100" max="100">
+                    <progress id="computer-health" value="100" max="100">
                     </progress>
                 </div>
 
-                <section class="resultScreen">
-                    <div class="playerChoice">
+                <section class="box-result">
+                    <div class="player-button-choice">
                         <button></button>
                     </div>
-                    <div class="result">
+                    <div class="result-text">
                         <h2></h2>
                         <h1></h1>
                         <h3></h3>
                     </div>
-                    <div class="computerChoice">
+                    <div class="computer-button-choice">
                         <button></button>
                     </div>
                 </section>
 
             </section>
 
-            <div class="rhs">
+            <section class="box-right">
                 <p>Computer</p>
-                <button class="computerF fas fa-fire fa-3x"></button>
-                <button class="computerW fas fa-tint fa-3x"></button>
-                <button class="computerG fas fa-leaf fa-3x"></button>
-            </div>
-        </section>
+                <button class="computer-fire fas fa-fire fa-3x"></button>
+                <button class="computer-water fas fa-tint fa-3x"></button>
+                <button class="computer-grass fas fa-leaf fa-3x"></button>
+            </section>
 
-        <section class="replayBtn">
+        </div>
+
+        <aside class="button-replay">
             <button class="fas fa-redo fa-1g"></button>
-        </section>
+        </aside>
     </main>
 
 

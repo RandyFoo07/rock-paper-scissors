@@ -6,8 +6,8 @@ const buttonReplay = document.querySelector('.button-replay button');
 const overallResult = document.querySelector('.result-text h1');
 const roundNum = document.querySelector('.result-text h2');
 const boxResult = document.querySelector('.result-text h3');
-const playerHP = document.querySelector('#player-health');
-const computerHP = document.querySelector('#computer-health');
+const playerHP = document.querySelector('.player-health');
+const computerHP = document.querySelector('.computer-health');
 const playerC = document.querySelector('.player-button-choice button');
 const computerC = document.querySelector('.computer-button-choice button');
 
@@ -33,6 +33,8 @@ function selectChoice(e) {
     compC = computerPlay();
 
     resetSelection();
+    computerC.innerHTML = '';
+    playerC.innerHTML = '';
 
     if (computerC.className != '') {
         computerC.className = '';
@@ -56,13 +58,13 @@ function selectChoice(e) {
         computerChoice = 'Grass';
     }
 
-    if (className === 'player-fire fas fa-fire fa-3x') {
+    if (className === 'player-fire fas fa-fire fa-2x') {
         setNewButtonFire(playerC);
         playerChoice = 'Fire';
-    } else if (className === 'player-water fas fa-tint fa-3x') {
+    } else if (className === 'player-water fas fa-tint fa-2x') {
         setNewButtonWater(playerC);
         playerChoice = 'Water';
-    } else if (className === 'player-grass fas fa-leaf fa-3x') {
+    } else if (className === 'player-grass fas fa-leaf fa-2x') {
         setNewButtonGrass(playerC);
         playerChoice = 'Grass';
     }
@@ -149,6 +151,9 @@ function replayGame() {
     roundNum.textContent = '';
     playerHP.value = 100;
     computerHP.value = 100;
+    computerC.innerHTML = '?';
+    playerC.innerHTML = '?';
+
 
     resetSelection();
 
@@ -173,19 +178,19 @@ function resetSelection() {
 }
 
 function setNewButtonFire(button) {
-    button.className = 'computer-fire fas fa-fire fa-3x';
+    button.className = 'computer-fire fas fa-fire fa-2x';
     button.style.backgroundImage = 'radial-gradient(rgb(255, 144, 39), rgb(255, 61, 61))';
     button.style.boxShadow = '0px 0px 10px 10px rgb(255, 74, 19)';
 }
 
 function setNewButtonWater(button) {
-    button.className = 'computer-water fas fa-tint fa-3x';
+    button.className = 'computer-water fas fa-tint fa-2x';
     button.style.backgroundImage = 'radial-gradient(rgb(159, 236, 255), rgb(60, 216, 255), rgb(57, 149, 255))';
     button.style.boxShadow = '0px 0px 10px 10px  rgb(86, 165, 255)';
 }
 
 function setNewButtonGrass(button) {
-    button.className = 'computer-grass fas fa-leaf fa-3x';
+    button.className = 'computer-grass fas fa-leaf fa-2x';
     button.style.backgroundImage = 'radial-gradient(rgb(158, 238, 158), rgb(118, 224, 145), rgb(56, 219, 41))';
     button.style.boxShadow = '0px 0px 10px 10px rgb(47, 212, 32)';
 }

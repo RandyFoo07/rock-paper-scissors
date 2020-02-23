@@ -15,7 +15,7 @@
 
 <body>
     <header>
-        <h1 id="title">Rock Paper Scissors</h1>
+        <h1 class="header-title">Rock Paper Scissors</h1>
         <img src="assets/pokemonedition.png" alt="pokemon edition">
     </header>
 
@@ -24,27 +24,27 @@
 
             <section class="box-left">
                 <p>You</p>
-                <button class="player-fire fas fa-fire fa-3x"></button>
-                <button class="player-water fas fa-tint fa-3x"></button>
-                <button class="player-grass fas fa-leaf fa-3x"></button>
+                <button class="player-fire fas fa-fire fa-2x"></button>
+                <button class="player-water fas fa-tint fa-2x"></button>
+                <button class="player-grass fas fa-leaf fa-2x"></button>
             </section>
 
 
             <section class="box-middle">
-                <div class="player-health-container">
-                    <p>HP:</p>
-                    <progress id="player-health" value="100" max="100">
+                <div class="health-container-player">
+                    <p class="health-container-text">HP:</p>
+                    <progress class="player-health healthbar" value="100" max="100">
                     </progress>
                 </div>
-                <div class="computer-health-container">
-                    <p>HP:</p>
-                    <progress id="computer-health" value="100" max="100">
+                <div class="health-container-computer">
+                    <p class="health-container-text">HP:</p>
+                    <progress class="computer-health healthbar" value="100" max="100">
                     </progress>
                 </div>
 
                 <section class="box-result">
                     <div class="player-button-choice">
-                        <button></button>
+                        <button>?</button>
                     </div>
                     <div class="result-text">
                         <h2></h2>
@@ -52,7 +52,7 @@
                         <h3></h3>
                     </div>
                     <div class="computer-button-choice">
-                        <button></button>
+                        <button>?</button>
                     </div>
                 </section>
 
@@ -60,9 +60,9 @@
 
             <section class="box-right">
                 <p>Computer</p>
-                <button class="computer-fire fas fa-fire fa-3x"></button>
-                <button class="computer-water fas fa-tint fa-3x"></button>
-                <button class="computer-grass fas fa-leaf fa-3x"></button>
+                <button class="computer-fire fas fa-fire fa-2x"></button>
+                <button class="computer-water fas fa-tint fa-2x"></button>
+                <button class="computer-grass fas fa-leaf fa-2x"></button>
             </section>
 
         </div>

@@ -57,7 +57,7 @@ button {
 
 /* ==========
 Layout
-============ */
+========== */
 body {
     text-align: center;
     background-image: url(assets/background1.jpg);
@@ -262,6 +262,11 @@ button:focus {
     box-shadow: 0px 0px 10px 10px rgb(47, 212, 32);
 }
 
+
+
+/* ==========
+Media Queries
+========== */
 /*small laptops/ tablets (landscape)*/
 @media (max-height: 750px) {
     /* ==========
